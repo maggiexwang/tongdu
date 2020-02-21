@@ -1,0 +1,112 @@
+deal_id,date,items,value_million
+1,19890101,88 Standard Missile,44
+2,19900726,"F-5, F-104, C-130 Radar",108
+3,19900906,C-130H transport aircraft,45
+4,19910107,100 MK46 torpedoes,28
+5,19910724,97 SM-I standard air defense missiles,55
+6,19910913,110 M60A3,119
+7,19911118,Phase II PIP Mod Kits for HAWK air defense,170
+8,19920527,Weapons ammunition and support for 3 leased ships,212
+8,19920527,supply support arrangement,107
+9,19920804,207 SM-1 Standard Missile,126
+10,19920914,150 F-16A/B,5800
+10,19920914,3 Patriot-derived MADS fire units,1300
+10,19920918,12 SH-2F LAMPS anti-submarine helicopters,161
+11,19930617,12 C-130H transport aircraft,620
+11,19930625,supply support arrangement,156
+12,19930729,28 harpoon anti-ship missles,58
+12,19930730,logistics support for 40 leased T-38 trainers,70
+13,19930801,4 E-2T Hawkeye airborne early warning aircraft,700
+14,19930908,logistics support services for MADS,175
+15,19931104,150 Mk46 Mod5RC torpedoes and associated components,54
+15,19931109,Weapons ammunition and support for 3 leased ships,238
+16,19931123,MK-41 Mod vertical launch systems for ship-based air defense missiles,103
+17,19940801,80 AN/ALQ-184 ECM pods,150
+18,19940914,MK-45 Mod 2,21
+19,19950323,"6 MK-75 shipboard gun systems, 6 Phalanx Close-In",75
+29,19950607,supply support arrangement,192
+21,19960510,improved mobile subscriber equipment comm system,75
+21,19960510,"30 TH-67 training helicopers, 30 AN/AVS-6 night vision goggles",53
+22,19960523,"465 stringer missiles, 55 dual-mounted stringer launcher systems",84
+23,19960624,300 M60A3TTS tanks,223
+24,19960823,"1,299 FIM-92 Stinger and related equipment",420
+25,19960905,"110 MK-46 MOD 5 torpedoes, etc.",66
+26,19970214,"54 HARPOON missiles with containers, etc.",95
+27,19970523,"1,786 TOW 2A anti-armor guided missiles (to include 27 Lot Acceptance missiles), 114 TOW launchers, 100 M1045A2 High Mobility Multi-purpose Wheeled Vehicles trucks, etc.",81
+28,19970724,"21 AH-1W Super Cobra helicopters, etc.",479
+29,19970903,"13 OH-58D Kiowa Warrior Armed Scout helicopters with mast mounted sight subsystems, 13 T703-AD-700 helicopter engines, 13 HELLFIRE launchers, Hydra 70 rockets and rocket launchers, etc.",172
+30,19971109,"Provide funds for the establishment of a Cooperative Logistics Supply Support Arrangement (CLSSA) for spare parts in support of F-5B/E/F, F-104, F-16, C-130, C-119, C-47, and T-38 aircraft and for U.S. systems and sub-systems of the Indigenous Defense Fighter (IDF) aircraft.",140
+30,19971109,"The continuation of a pilot training program and logistics support for F-16 aircraft, etc.",280
+31,19980128,"3 KNOX class frigates (FF 1052), weapons and ammunition to include 1 MK 15 PHALANX Close-In Weapons System (CIWS), 1 AN/SWG-1A HARPOON launcher, etc.",300
+32,19980601,"28 sets of Pathfinder/Sharpshooter navigation and targeting pods, integration of the pods with the F-16A/B aircraft, etc.",160
+33,19980827,"131 MK 46 MOD 5(A)S torpedoes, etc.",69
+33,19980827,"61 Dual-mount STINGER Missile Systems, etc.",180
+33,19980827,"58 Harpoon anti-ship missiles, etc.",101
+34,19981009,"9 CH-47SD CHINOOK helicopters, etc.",486
+35,19990526,"240 AGM-114K3 HELLFIRE II Air-to-Surface Anti-Armor missiles, etc.",23
+35,19990526,"5 exportable AN/VRC-92E SINCGARS radio systems, 5 Commercial Off-the Shelf/Non-Developmental Item (COTS/NDI) Intelligence Electronic Warfare (IEW) systems, 5 HMMWV, etc.",64
+36,19990730,"2 E-2T Hawkeye 2000E aircraft, etc.",400
+36,19990730,"2 Provide funds for the establishment of a Cooperative Logistics Supply Support Arrangement (CLSSA) for spare parts in support of F-5E/F, C-130H, Indigenous Defense Fighter, F-16A/B with Block 15 Mid-Life Upgrade and for U.S. systems and sub-systems of the aircraft.",150
+37,20000302,"A conversion of TPS-43F air surveillance radar to TPS-75V configuration, etc.",96
+37,20000302,"162 HAWK Intercept Aerial guided missiles, etc.",106
+38,20000607,"39 sets of PATHFINDER/SHARPSHOOTER (LANTIRN derivative) navigation and targeting pods, etc.",234
+38,20000607,"48 AN/ALQ-184 Electronic Countermeasures pods, support equipment, etc.",122
+39,20000928,"continued Improved Mobile Subscriber Equipment (IMSE) communication system, etc.",513
+39,20000928,"146 M109A5 155mm self-propelled howitzers, 79 M2 machine gun, 6 M88A2 recovery vehicles, 160 AN/PVS-7B Night Vision Goggles, 146 AN/VRC-87E and 6 AN/VRC-90E SINCGARS, etc.",405
+39,20000928,71 RGM-84L Harpoon anti-ship missiles,240
+39,20000928,"200 AIM-120C Advanced Medium Range Air-to-Air Missiles (AMRAAM), 292 LAU-129 Missile Launchers, etc.",150
+40,20010718,50 JTIDS terminals for data links,725
+41,20010905,40 AGM-65G Miverick air-to-ground missiles for F-16s,18
+42,20011026,40 Javelin anti-tank missile systems and 360 Javelin missiles,51
+42,20011030,logistical support/spare parts for aircrafts,228
+43,20020604,3 AN/MPN-14 air traffic control radars,108
+44,20020904,54 AAV7A1 amphibious assualt vehicles,250
+44,20020904,"Maintanence and spare parts for aircraft, rafars, AMRAAMS, etc",174
+44,20020904,182 AIM-9M-1/2 sidewinder air-to-air missiles,36
+44,20020904,449 AGM-114M3 Hellfire II anti-armor missiles,60
+45,20021011,290 TOW-2B anti-tank missiles,18
+46,20010424,bush approves the 4 Kidd-class destroyers,
+46,20021121,4 Kidd-class destroyers,875
+47,20030924,MIDS for Po Sheng,775
+48,20040330,2 AN/FPS-115 ultra high frequency long range early warning radars,1776
+49,20051025,10 AIM-9M Sidewinder and 5 AIM-7M Sparrow; pilot training and support for F-16s,280
+50,20070228,"218 AIM-120C air-to-air missiles, 235 AGM-65 air-to-ground missiles",421
+51,20070808,60 AGM-84L Harpoon Block II air-launched anti-ship missiles,125
+52,20070912,144 RIM-66K SM-2 block IIIA surface-to-air missiles,272
+52,20070912,12 P-3C maritime patrol aircraft.,1960
+53,20071109,Patriot II missile system upgrades.,939
+54,20081003,"330 MIM-104F PAC-3 missiles , 4 launch system.",3100
+54,20081003,32 UGM-84L sub-launched anti-ship missiles.,200
+54,20081003,"Spare parts for F-16, C-130H, F-5E/F, Indigenous Defense Fighter (IDF), and other aircraft.",334
+54,20081003,182 Javelin anti-armor missiles,47
+54,20081003,Upgrade 4 E-2T to E-2K configuration (Hawkeye 2000 standard).,250
+54,20081003,30 AH-64D attack helicopters.,2532
+55,20100129,"60 UH-60M Black Hawk helicopters with 120 T-700-GE-701D engines, etc.",3100
+55,20100129,60 MIDS as follow-on tech support for Po Sheng C4,340
+55,20100129,"2 Osprey Class Mine Hunting Ships, incl. refurbishment and upgrade, etc.",105
+55,20100129,12 Harpoon Block II telemetry (training) missiles,37
+55,20100129,"114 Patriot Advanced Capability (PAC-3) missiles, 3 AN/MPQ-65 Radar Sets, 1 AN/MSQ-133 Information and Coordination Centrals, etc.",2810
+56,20110921,"Continuation of a pilot training program and logistics support for F-16 aircraft at Luke Air Force Base, Arizona",500
+56,20110921,"retrofit of 145 F-16A/B aircraft that includes sale of: 176 Active Electronically Scanned Array (AESA) radars, etc.",5300
+56,20110921,"a Foreign Military Sales Order II (FMSO II) to provide funds for blanket order requisitions, under the Cooperative Logistics Supply Agreement (CLSSA) for spare parts in support of F-16A/B, F-5E/F, C-130H, and Indigenous Defense Fighter aircraft.",52
+57,20151216,"208 Javelin Guided Missiles, etc.",57
+57,20151216,"4 Multifunctional Information Distribution Systems (MIDS) On Ship Low Volume Terminals (LVTs); 4 Command and Control Processor (C2P) units, etc.",75
+57,20151216,"769 TOW 2B Aero, Radio Frequency (RF) Missiles (BGM-71F-Series)?14 TOW 2B Aero, Radio Frequency (RF) (BGM-71F-Series) Fly-to-Buy Missiles?46 Improved Target Acquisition System (ITAS)?4 ITAS spares, etc.",268
+57,20151216,"13 MK 15 Phalanx Block lB Baseline 2 Close-in Weapons System (CIWS) Guns; 8 CIWS Block 1 Baseline 0 to Block 1B Baseline 2 upgrade kits; 260,000 Rounds of 20mm MK 244 MOD 0 Armour-Piercing Discarding Sabots (APDS)",416
+57,20151216,"The sale, refurbishment, and upgrade of 2 Oliver Hazard Perry-class frigates (FFG-7) being provided as Excess Defense Articles (EDA).",190
+57,20151216,"250 Block I -92F MANPAD Stinger Missiles; 4 Block I -92F MANPAD Stinger Fly-to-Buy Missiles, etc.",217
+57,20151216,36 Assault Amphibious Vehicles (AAVs); 30 .50 Caliber M2 machine guns; 6 7.62mm M240 machine guns,375
+57,20151216,Follow-on life cycle support to maintain the Multifunctional Information Distribution Systems Low Volume Terminals (MIDS/LVT-1) & Joint Tactical Information Distribution Systems (JTIDS).,120
+57,20151216,unspecified minesweepers in a direct commercial sale,108
+58,20170629,"16 Standard Missile-2 (SM-2) Block IIIA All-Up Rounds (AUR), 47 MK 93 MOD 1 SM-2 Block IIIA Guidance Sections (GSs), 5 MK 45 MOD 14 SM-2 Block IIIA Target Detecting Devices (TDDs) Shrouds, 17 MK 11 MOD 6 SM-2 Block IIIA Autopilot Battery Units (APBUs) maneuverability upgrades on the GSs, 69 section containers, 16 AUR containers, operator manuals and technical documentation, U.S. Government and contractor engineering, technical and logistics support services.",125
+58,20170629,"MK 54 Lightweight Torpedo (LWTs) in support of their LWT program, including LWT containers, torpedo support, torpedo spare parts, publications, training, weapon system support, engineering and technical assistance for the upgrade and conversion of 168 MK-46 Mod 5 Torpedoes to the MK-54 LWT configuration.",175
+58,20170629,"46 MK 48 Mod 6AT Heavyweight Torpedoes (HWT), including HWT containers, torpedo support, torpedo spare parts, publications, training, weapon system support, engineering and technical assistance.",250
+58,20170629,"upgrade the AN/SLQ-32(V)3 Electronic Warfare Systems in support of 4 ex-KIDD Class (now KEELUNG Class) destroyers. This sale will include AN/SLQ-32(V)3 upgrade hardware, software, support equipment and parts, publications, training, engineering and technical assistance.",80
+58,20170629,"56 AGM-154C JSOW Air-to-Ground Missiles. This request also includes: JSOW integration, captive flight vehicles, dummy training missiles, missile containers, spare and repair parts, support and test equipment, Joint Mission Planning System updates, publications and technical documentation, personnel training and training equipment, U.S. Government and contractor engineering, technical and logistics support services, and other related elements of logistical and program support.",185.5
+58,20170629,"50 AGM-88B HARMs and 10 AGM-88B Training HARMs. This request also includes: HARM integration, LAU-l 18A Launchers, missile containers, spare and repair parts, support and test equipment, Joint Mission Planning System update, publications and technical documentation, personnel training and training equipment, U.S. Government and contractor engineering, technical and logistics support services, and other related elements of logistical and program support.",147.5
+58,20170629,"SRP Operations and Maintenance follow-on sustainment package that includes, contractor logistics support (sustainment); engineering services and technical updates to address equipment obsolescence; transportation and material costs associated with contractor repair and return services; spare and repair parts; support and test equipment; publications and technical documentation; personnel training and training equipment; U.S. Government and contractor engineering; technical and logistics support services; and other related elements of logistical and program support.",400
+59,20180924,"Spare parts for F-16, C-130H, F-5E/F, Indigenous Defense Fighter (IDF), and other aircraft.",330
+60,20190415,"Continuation of the pilot training program of 21st FS in Luke AFB, Arizona.",500
+61,20190708,"250 FIM-92F missiles, 108 launchers, 31 trainers.",223.56
+61,20190708,"108 M1A2T main battle tanks, 14 M88 recovery vehicles, 16 M1070A1 transporters, 16 M1000 trailers, ammunition.",2000
+62,20190820,"66 F-16C/D block 70 fighters, 75 F110 engines, 75 Link 16 systems, 75 AN/APG-83 AESA radars, 120 AN/ALE-50 towed decoy systems, ammunition.",8000
