@@ -5,8 +5,8 @@ sys.path.append("C:/Users/xiaon/OneDrive/Thesis/tongdu/twpres/twpres")
 import scrapy
 from items import TwpresItem
 
-class FormerSpider(scrapy.Spider):
-    name = 'former'
+class PresidentSpider(scrapy.Spider):
+    name = 'president'
     allowed_domains = ['president.gov.tw']
     
     #generate list of start_urls to avoid dealing with the tricky page flip

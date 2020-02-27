@@ -1,0 +1,7 @@
+1. For all Tsai administration news releases on all topics relevant to cross-strait relations ("Liang An"):
+`scrapy crawl tsai`
+or `scrapy crawl tsai -o [filename] -t csv`
+
+2. For all news releases available on the Office of the President website from Minguo 81 (1992) Jan 1st:
+`scrapy crawl president`
+or `scrapy crawl president -o [filename] -t csv`
