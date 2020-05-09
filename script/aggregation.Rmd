@@ -2,9 +2,174 @@
 title: "Aggregating TongDu Tables"
 author: "Maggie X. Wang"
 date: "2/21/2020"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+library(dplyr)
+library(tidyverse)
+library(ggplot2)
+library(sqldf)
+```
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+#read in data
+setwd('C:/Users/xiaon/OneDrive/Thesis/tongdu/tables')
+
+president_year <- read_csv("president-year.csv") %>% 
+  mutate(pyear = as.factor(`president-year`),
+         py_president = as.factor(president)) %>% 
+  select(-`president-year`) %>% 
+  select(-president)
+president_year$pyear <- factor(president_year$pyear, levels = c("lee-1", "lee-2", "lee-3", "lee-4", "lee-5", "lee-6", "lee-7", "lee-8", "lee-9", "lee-10", "lee-11", "lee-12", 
+                                      "chen-0", "chen-1", "chen-2", "chen-3", "chen-4", "chen-5", "chen-6", "chen-7", "chen-8",
+                                      "ma-0", "ma-1", "ma-2", "ma-3", "ma-4", "ma-5", "ma-6", "ma-7", "ma-8",
+                                      "tsai-0", "tsai-1", "tsai-2", "tsai-3", "tsai-4"))
+transactions <- read_csv("transactions.csv")
+transaction_reaction <- read_csv("transaction-reaction.csv")
+tongdu_event <- read_csv("tongdu-event.csv") %>% 
+  mutate(president = as.factor(president),
+         source = as.factor(source), 
+         exclude = as.factor(exclude))
+```
+
+```{r warning=FALSE}
+#aggregation1
+tongdu_year <- sqldf('SELECT * 
+FROM tongdu_event
+LEFT JOIN president_year ON ((date BETWEEN start and end) AND (tongdu_event.president=py_president))') %>% 
+  filter(is.na(exclude)) %>% 
+  filter(source=="mac") %>% 
+  mutate(pyear = forcats::fct_explicit_na(pyear)) %>% 
+  group_by(pyear) %>% 
+  summarise(n = n(),
+            tong_mean = mean(tong, ma.rm=TRUE), 
+            du_mean = mean(du, na.rm = TRUE),
+            tong_total = sum(tong, na.rm = TRUE),
+            du_total = sum(du, na.rm = TRUE))
+```
+
+```{r}
+ggplot(tongdu_year, aes(x=pyear)) + 
+  #geom_bar(stat = "identity", aes(y=n/15)) + 
+  geom_line(aes(y=tong_mean, group = 1), color = "blue", size = 1.2) + 
+  geom_line(aes(y=du_mean, group = 1), color = "seagreen", size = 1.2) + 
+  xlab("President-Year") + 
+  ylab("Average Tong/Du Score") + 
+  theme_minimal() + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+```
+
+```{r}
+ggplot(tongdu_year, aes(x=pyear, y=tong_mean-du_mean)) + 
+  geom_line(aes(group = 1)) + 
+  geom_hline(yintercept=0, color = "red") + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+```
+
+
+```{r}
+#aggregation2: arms sales with pyear
+transaction_year <- sqldf('SELECT * 
+FROM transactions
+LEFT JOIN president_year ON date BETWEEN start and end') %>% 
+  group_by(pyear) %>% 
+  summarise(n = n_distinct(deal_id),
+            total_value = sum(value_million, na.rm = TRUE),
+            mean_value = mean(value_million, na.rm = TRUE))
+```
+
+```{r}
+ggplot(transaction_year, aes(x=pyear, y=total_value)) + geom_line(aes(group = 1)) + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+```
+
+
+```{r}
+#aggregation3: transaction-reaction with pyear
+reaction <- sqldf('SELECT *
+FROM transaction_reaction
+LEFT JOIN president_year ON date BETWEEN start and end') %>% 
+  group_by(pyear) %>% 
+  summarise(total_us = sum(target_us, na.rm = TRUE),
+            total_tw = sum(target_tw, na.rm = TRUE),
+            response_mean = mean(response, na.rm = TRUE),
+            response_total = sum(response, na.rm = TRUE),
+            n_response = length(which(response!=0)))
+
+```
+
+```{r}
+reaction %>% 
+  filter(response_total!=0) %>% 
+  ggplot() + 
+  geom_bar(stat = "identity", aes(x=pyear, y = n_response)) + 
+  geom_line(aes(x=pyear, y = response_mean, group = 1), color = "red") + 
+  scale_y_continuous(name = "Number of Responses", 
+                     sec.axis = sec_axis(~., name = "Response Score Mean"))
+```
+
+```{r}
+transaction_year %>% 
+  ggplot() + 
+  geom_bar(stat = "identity", aes(x=pyear, y=n), fill = "grey") + 
+  geom_bar(data = reaction, aes(x=pyear, y = n_response), stat = "identity", fill = "darkolivegreen3") + 
+  geom_line(data = filter(reaction, n_response!=0), aes(x=pyear, y = response_mean, group = 1), color = "darkgreen", size = 1.2) + 
+  geom_point(data = filter(reaction, n_response!=0), aes(x=pyear, y = response_mean, group = 1), color = "darkgreen", size = 2) +
+  xlab("Year with US Arms Sales") + 
+  ylab("Average Response Score") + 
+  theme_minimal() + 
+  theme(axis.text.x = element_text(angle = 90))
+```
+
+
+```{r}
+#grand aggregation
+meta <- tongdu_year %>% 
+  left_join(reaction, by = "pyear") %>% 
+  left_join(select(transaction_year, -n), by = "pyear") %>% 
+  mutate(n_event = n, 
+         tongdu_diff = tong_mean-du_mean,
+         tongdu_diff_ttl = tong_total-du_total) %>% 
+  select(-n)
+
+#meta_response <- meta %>% filter(!is.na(response_mean)) %>% 
+#  mutate(response_yn = ifelse(response_total==0, 0, 1))
+
+meta_response <- meta %>% filter(n_response!=0)
+```
+
+```{r}
+m_yn <- lm(n_response ~ tong_mean + du_mean + n_event + total_value, data = meta_response)
+summary(m_yn)
+```
+
+```{r}
+m_tongdu <- lm(response_total ~ tong_mean + du_mean + total_value, data = meta)
+summary(m_tongdu)
+```
+
+
+```{r}
+#trying out some regressions
+m_tong <- lm(response_total ~ tong_mean + n_event + total_value, data = meta)
+summary(m_tong)
+```
+
+```{r}
+m_du <- lm(response_total ~ du_mean + n_event + total_value, data = meta)
+summary(m_du)
+```
+
+```{r}
+m_diff <- lm(response_total ~ tongdu_diff + total_value, data = meta)
+summary(m_diff)
 ```
